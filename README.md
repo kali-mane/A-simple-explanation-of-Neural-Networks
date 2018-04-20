@@ -2,6 +2,7 @@
 A simple explanation of Neural Networks
         
 **Machine Learning**
+
 Machine Learning is a practice of using algorithms to analyze data, learn from that data and then make predictions about new data.
 With machine learning, rather than manually writing code to accomplish a set of instructions, the machine is trained 
 using lot of data and algorithms that gives the ability to perform the task without being explicitly being told how to do so.
