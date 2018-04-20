@@ -39,12 +39,14 @@ layer.
 
 
 **Layers in a Neural Network**
+
 Each connection from one unit to another will have its own assigned weight which is generally a number between zero and one. Weights represent the strength of the connections between the units. First when we receive a input at the input layer that input is passed to the neuron in the next layer via a connection and the input is multiplied by the weight assigned to this particular connection. A weighted sum is then computed with each of the connections that are pointing to this neuron. The sum is then passed to an activation function which transforms the result into a number between 0 and 1. Once we get the result of the transformation from the activation function, that result is passed on to the next neuron in the next layer. The same process which we described now from receiving the input at each layer to the transformation by an activation function occurs over and over again until we reach the output layer. Also during this process, the weights for each connection will continuously be changing in order to reach optimized weights for each connection as the model continues to learn from the data.
 We reach the output layer following the hidden layer. We have two output units/neurons in this layer; these units typically represent categories (of data).
 For eg., if this model has a task of classifying if this image is an image of a cat or a dog, then the output layer would have two 
 units representing two possible outputs cats and dogs. If we add image of another animal say parrot, and we want our model to classify our image based being it of a cat or dog or parrot, as such our output layer will have three units representing each of the three possible image types.
 
 This is how layers in a neural network function in general.
+
 
 **Activation Functions**
 
@@ -70,7 +72,9 @@ is. The neuron is less activated if it is closer to 0.
 
 **Tanh** -
 
+
 **Before we dive more into understanding the training process, let get some idea of some terms used in neural networks.**
+
 
 **Parameters** - Parameters are something that a model learns on its own, are internal to the model and whose value can be estimated from data. Some of the examples of parameters are weights, bias.
 
@@ -96,6 +100,7 @@ After passing in all of the data through the model, we continue to pass the same
 
 
 **How a Neural Network learns**
+
 A single pass of the data through the network is called an epoch. The same data will be passed over and over again through multiple epochs and during this process, the model learns.
 When the model is first initialized it is set with some arbitrary weights. Also at the end of the network, the model will give an
 output for a given input. Then it will compute the loss or the error of that output by looking at what the model predicted versus 
@@ -112,6 +117,7 @@ We now have a general idea about how to train the model and how the model learns
 **Train, Test & Validation Sets**
 
 For training and testing purposes, the data is broken down into 3 distinct datasets. These datasets consists of a training set, validation set and a test set.
+
 **Training Set** - It is a set of data that is used to train the model. During each epoch, the model will be trained over and over 
 again on the same data in the training set and continue to learn about the features of this data. The help with this is that later
 we can deploy our model and make it predict on data which it has never seen before. It will make predictions based on what it learns about the training data.
