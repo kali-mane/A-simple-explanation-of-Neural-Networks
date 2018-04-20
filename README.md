@@ -8,16 +8,19 @@ With machine learning, rather than manually writing code to accomplish a set of 
 data and algorithms that gives the ability to perform the task without being explicitly being told how to do so.
 
 
+
 **Deep Learning**
 
 Deep Learning is a sub field of machine learning that is inspired by the structure and function of brain's neural networks. The
 algorithms and models in deep learning are based on the structure and function of the brain's neural networks and its learning occurs     either in supervised or unsupervised form.
 
 
+
 **Supervised and Unsupervised learning**
 
 Supervised learning basically occurs when our deep learning model learns and makes inferences from the data that has been already 
 been labeled. Unsupervised learning, however, occurs when the model learns and makes inferences from unlabeled data.
+
 
 
 **Artificial Neural Networks**
@@ -38,6 +41,7 @@ in a model that will work with time series data. A dense layer is just a layer t
 layer.
 
 
+
 **Layers in a Neural Network**
 
 Each connection from one unit to another will have its own assigned weight which is generally a number between zero and one. Weights represent the strength of the connections between the units. First when we receive a input at the input layer that input is passed to the neuron in the next layer via a connection and the input is multiplied by the weight assigned to this particular connection. A weighted sum is then computed with each of the connections that are pointing to this neuron. The sum is then passed to an activation function which transforms the result into a number between 0 and 1. Once we get the result of the transformation from the activation function, that result is passed on to the next neuron in the next layer. The same process which we described now from receiving the input at each layer to the transformation by an activation function occurs over and over again until we reach the output layer. Also during this process, the weights for each connection will continuously be changing in order to reach optimized weights for each connection as the model continues to learn from the data.
@@ -46,6 +50,7 @@ For eg., if this model has a task of classifying if this image is an image of a 
 units representing two possible outputs cats and dogs. If we add image of another animal say parrot, and we want our model to classify our image based being it of a cat or dog or parrot, as such our output layer will have three units representing each of the three possible image types.
 
 This is how layers in a neural network function in general.
+
 
 
 **Activation Functions**
@@ -73,6 +78,7 @@ is. The neuron is less activated if it is closer to 0.
 **Tanh** -
 
 
+
 **Before we dive more into understanding the training process, let get some idea of some terms used in neural networks.**
 
 
@@ -88,6 +94,7 @@ input data. It is a non-negative value where the robustness of the model increas
 **Optimization Technique** - The optimization technique is designed to modify parameters in order to decrease the error/increase the accuracy in the next step ultimately maximizing the accuracy/minimizing the error. This is generally done using Gradient Descent algorithm.
 
 
+
 **Training a Neural Network**
 
 When we train a model, we are basically trying to solve an optimization problem. We are trying to optimize the weights within the model. We already mentioned that each connection has a weight assigned to it. During training, the weights will constantly be updated to reach their optimal values. The weights are optimized based on the optimization algorithm or optimizer that we choose to use for our model. Most widely used model is called stochastic gradient descend or SGD. The objective of any optimization algorithm is to minimize a loss function. The SGD will be assigning the weights in such a way so as to make the loss as close to zero as possible. There are several loss functions, for example, mean squared error.
@@ -97,6 +104,7 @@ During training we supply our model with data and labels to that data. For e.g.,
 Let’s suppose after training, we pass an image of a cat through the network, the model will give an output at the end. The output is what the model thinks the image is either a cat or a dog. It actually consists of the probabilities for cat or dog. It may assign 75% probability to the image being a cat or 25% probability to the image being a dog. It assigns a higher likelihood of an image being a cat than a dog. In this case, the loss is the error between what the model is predicting for the image versus what the true label of the image actually is. Thus the optimization algorithm basically tries to minimize this error to make our model as accurate as possible in its predictions.
 
 After passing in all of the data through the model, we continue to pass the same data over and over again. During this process of repeatedly sending the data into the model, is when the model will actually learn. During this process of optimization, the model will learn from that data and then update the weights in the model accordingly.
+
 
 
 **How a Neural Network learns**
@@ -112,6 +120,7 @@ in the model each time the data passes through it. This updating of the weights 
 It’s learning what values to assign to each weight based on how those incremental changes are affecting the loss function.
 
 We now have a general idea about how to train the model and how the model learns through this training process.
+
 
 
 **Train, Test & Validation Sets**
@@ -143,6 +152,7 @@ The model when predicts on unlabeled data in the test set, this is the same type
 our model in the production field.
 
 
+
 **Overfitting**
 
 Overfitting occurs when our model becomes really good at being able to classify or predict on data that is included in the training
@@ -153,9 +163,11 @@ the fact that our model is unable to generalize well, meaning that it has learne
 that if we give the model any data that slightly deviates from exact data that is used during training, the model is unable to generalize and accurately predict the output. Overfitting is a common issue.
 
 
+
 **Underfitting**
 
 Underfitting is opposite to Overfitting. A model is said to be underfitting when it is not even able to classify the data that it was trained on well. We can tell that the model is underfitting with the metrics given for the training data are poor, meaning that the training accuracy of the model is low and/or the training loss is high. If the model is unable to properly classify the data it was trained on, is likely not going to do well on data that it has not seen before.
+
 
 
 **Regularization**
@@ -168,16 +180,19 @@ our loss function that penalizes for large weights. The most common regularizati
 In other words, regularization is nothing but adding a penalty term to the objective function and control the model complexity using that penalty term. It penalizes the model rather than explicitly trying to fit the training data.
 
 
+
 **Learning Rate**
 
 The main purpose of the gradient descent is to minimize the loss between the actual output and the predicted output from our given training samples. We start the training process with arbitrarily set weights and then we incrementally update these weights as we move closer and closer to the minimized loss. The size of these steps that we are taking to reach the minimized loss is going to depend on learning rate.
+
 
 
 **Batch Size**
 
 Batch size is the number of samples that will be passed through to the network at one time('batch' aka 'mini-batch'). Recall that an epoch is one single pass o all the data through to the network. The batch size and epoch are not the same thing. Example - Let’s say
 we have 1K images of dogs that we want to identify different breeds of dogs. Now let’s say we specify our batch size to be 10. This means that 10 images of dogs will be passed as group or as a batch at one time to the network. Given that a single epoch is one single pass of all the data through the network, it will take 100 batches to make up 1 full epoch.
-1000 images / batch size of 10 = 100 batches per epoch.
+
+                        1000 images / batch size of 10 = 100 batches per epoch.
 
 Larger batch size will be equivalent to faster training. The tradeoff however is even if our machine can handle large batches; the quality of the model may degrade as we set our batches larger and may ultimately cause the model to be able to generalize well on 
 the data that it has not seen before. Thus batch size is another hyperparameter that we may test and tune based on how our specific model is performing during training.   
