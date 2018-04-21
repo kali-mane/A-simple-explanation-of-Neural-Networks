@@ -51,6 +51,8 @@ We reach the output layer following the hidden layer. We have two output units/n
 For eg., if this model has a task of classifying if this image is an image of a cat or a dog, then the output layer would have two 
 units representing two possible outputs cats and dogs. If we add image of another animal say parrot, and we want our model to classify our image based being it of a cat or dog or parrot, as such our output layer will have three units representing each of the three possible image types.
 
+Just to add, the value of weights can be negative too. Also the output of the activation function can be negative if Tanh is used as an activation function to transform the result.
+
 This is how layers in a neural network function in general.
 
 
@@ -101,7 +103,7 @@ input data. It is a non-negative value where the robustness of the model increas
 
 **Training a Neural Network**
 
-When we train a model, we are basically trying to solve an optimization problem. We are trying to optimize the weights within the model. We already mentioned that each connection has a weight assigned to it. During training, the weights will constantly be updated to reach their optimal values. The weights are optimized based on the optimization algorithm or optimizer that we choose to use for our model. Most widely used model is called stochastic gradient descend or SGD. The objective of any optimization algorithm is to minimize a loss function. The SGD will be assigning the weights in such a way so as to make the loss as close to zero as possible. There are several loss functions, for example, mean squared error.
+When we train a model, we are basically trying to solve an optimization problem. We are trying to optimize the weights within the model. We already mentioned that each connection has a weight assigned to it. During training, the weights will constantly be updated to reach their optimal values. The weights are optimized based on the optimization algorithm or optimizer that we choose to use for our model. Most widely used algorithm is called stochastic gradient descent or SGD. The objective of any optimization algorithm is to minimize a loss function. The SGD will be assigning the weights in such a way so as to make the loss as close to zero as possible. There are several loss functions, for example, mean squared error.
 
 During training we supply our model with data and labels to that data. For e.g., we have a model that we want to train on classifying whether the images are of  a cats or dogs, then we supply the model with images of cats and dogs along with the labels for these images that tell whether the image is of a cat or a dog.
 
