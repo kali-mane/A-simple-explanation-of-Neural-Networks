@@ -41,7 +41,7 @@ in a model that will work with time series data. A dense layer is just a layer t
 layer.
 
 
-    ![neural networks](https://user-images.githubusercontent.com/32324416/39083687-13d29b14-4586-11e8-8ac4-4601c00fb6a9.png)
+   ![neural networks](https://user-images.githubusercontent.com/32324416/39083687-13d29b14-4586-11e8-8ac4-4601c00fb6a9.png)
 
 
 **Layers in a Neural Network**
@@ -54,7 +54,7 @@ units representing two possible outputs cats and dogs. If we add image of anothe
 This is how layers in a neural network function in general.
 
 
-    ![nn_weights 2](https://user-images.githubusercontent.com/32324416/39083693-2670514e-4586-11e8-9dca-e53c0e1a347d.png)
+   ![nn_weights 2](https://user-images.githubusercontent.com/32324416/39083693-2670514e-4586-11e8-9dca-e53c0e1a347d.png)
 
 
 **Activation Functions**
