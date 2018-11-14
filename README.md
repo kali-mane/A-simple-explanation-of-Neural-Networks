@@ -1,5 +1,5 @@
 # A-simple-explanation-of-Neural-Networks
-
+This article is just to give a glimpse or a basic understanding of how the neural networks work in general. The different topics discussed here can be referred for more advanced explanations.
         
 **Machine Learning**
 
@@ -78,11 +78,9 @@ input is a very positive number, the sigmoid will transform the input to a num c
 0 is the lower limit and 1 is the upper limit. A neuron can be between 0 and 1. So the closer to 1, the more activated that neuron 
 is. The neuron is less activated if it is closer to 0.
 
-**Relu** - One of the most widely used activation functions today called relu (Rectified Linear Unit) transforms the input to the maximum of either 0 or the input itself. So if the input is less than 0, the relu will transform the input to be 0. if the num is greater than 0, the relu will just output the same output.  The more positive the neuron, the more activated it is.
+**Relu** - One of the most widely used activation functions today called relu (Rectified Linear Unit) transforms the input to the maximum of either 0 or the input itself. So if the input is less than 0, the relu will transform the input to be 0. If the num is greater than 0, the relu will just output the same output.  The more positive the neuron, the more activated it is.
+ 
  There are many different types of activation functions that do different types of transformations to the inputs.
-
-**Tanh** -
-
 
 
 **Before we dive more into understanding the training process, let get some idea of some terms used in neural networks.**
@@ -95,7 +93,7 @@ hyperparameters are learning rate, number of hidden layers, number of hidden uni
 say that the hyper-parameters are parameters which we specify externally and so they control the ultimate parameters (weights and bias)
 
 **Loss Function** - A loss function is used to measure the inconsistencies between the predicted value and the actual label of the 
-input data. It is a non-negative value where the robustness of the model increases along with the decrease of the value of loss function. A commonly used loss function is cross entropy. There are other types of loss function as well like hinge loss etc.
+input data. Loss function tells us how quantitatively bad our predictions are as compared to our actual labels/target labels. It is a non-negative value where the robustness of the model increases along with the decrease of the value of loss function. A commonly used loss function is cross entropy. There are other types of loss function as well like hinge loss etc.
 
 **Optimization Technique** - The optimization technique is designed to modify parameters in order to decrease the error/increase the accuracy in the next step ultimately maximizing the accuracy/minimizing the error. This is generally done using Gradient Descent algorithm.
 
@@ -202,4 +200,7 @@ we have 1K images of dogs that we want to identify different breeds of dogs. Now
 
 Larger batch size will be equivalent to faster training. The tradeoff however is even if our machine can handle large batches; the quality of the model may degrade as we set our batches larger and may ultimately cause the model to be able to generalize well on 
 the data that it has not seen before. Thus batch size is another hyperparameter that we may test and tune based on how our specific model is performing during training.   
+
+
+That's all for now! Happy Learning !!
 
